@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS Customers (
 -- Create orders table
 CREATE TABLE IF NOT EXISTS Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_id INT,
+    customer_id INT FOREIGN KEY,
     order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
